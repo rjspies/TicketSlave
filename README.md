@@ -1,3 +1,5 @@
 # TicketSlave
 ### Requires Python version >= 3.10
-A script that creates git branches from Jira tickets
+
+### Usage
+`python3.11 slave.py xx-xx` xx-xx = ticket number
