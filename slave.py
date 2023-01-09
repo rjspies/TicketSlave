@@ -6,10 +6,10 @@ from git import Repo, RemoteReference
 
 
 def __create_git_branch_and_push_to_remote(branch_name: str):
-    onetouch_repository = Repo("~/AndroidStudioProjects/Daedalus")
-    branch = onetouch_repository.create_head(branch_name)
-    onetouch_repository.remote().push(branch.name)
-    remote_branch = RemoteReference(onetouch_repository, "refs/remotes/origin/{}".format(branch_name))
+    daedalus_repository = Repo("~/AndroidStudioProjects/Daedalus")
+    branch = daedalus_repository.create_head(branch_name)
+    daedalus_repository.remote().push(branch.name)
+    remote_branch = RemoteReference(daedalus_repository, "refs/remotes/origin/{}".format(branch_name))
     branch.set_tracking_branch(remote_branch)
 
 
