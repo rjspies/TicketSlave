@@ -6,7 +6,7 @@ from git import Repo, RemoteReference
 
 
 def __create_git_branch_and_push_to_remote(branch_name: str):
-    daedalus_repository = Repo("~/AndroidStudioProjects/Daedalus")
+    daedalus_repository = Repo("~/Projects/Daedalus")
     branch = daedalus_repository.create_head(branch_name)
     daedalus_repository.remote().push(branch.name)
     remote_branch = RemoteReference(daedalus_repository, "refs/remotes/origin/{}".format(branch_name))
